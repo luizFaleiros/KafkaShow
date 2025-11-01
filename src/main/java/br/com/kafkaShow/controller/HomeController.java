@@ -25,6 +25,7 @@ public class HomeController implements Initializable {
             @Override
             public void handle(ActionEvent event) {
                 testar();
+
             }
         });
     }
