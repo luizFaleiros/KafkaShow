@@ -20,10 +20,6 @@ logs/
 *.war
 *.ear
 
-# Spring Boot specific
-/src/main/resources/application*.properties
-/src/main/resources/application*.yml
-
 # Other common ignores
 .DS_Store
 .gradle/
