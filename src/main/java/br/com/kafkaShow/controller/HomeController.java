@@ -1,11 +1,12 @@
 package br.com.kafkaShow.controller;
 
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
+import br.com.kafkaShow.entities.KafkaTopics;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
+import javafx.scene.control.ListView;
 import org.springframework.stereotype.Component;
 
 import java.net.URL;
@@ -14,23 +15,21 @@ import java.util.ResourceBundle;
 @Component
 public class HomeController implements Initializable {
     @FXML
-    private Button teste;
+    private Button addNewTopic;
 
     @FXML
-    private Label labelTeste;
+    private ListView<KafkaTopics> kafkaTopicsList;
+
+    @FXML
+    private ListView<String> messageBrokerList;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        teste.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                testar();
+        ObservableList<String> items = FXCollections.observableArrayList(
+                "Item 1", "Item 2", "Item 3", "Item 4", "Item 5"
+        );
 
-            }
-        });
+        addNewTopic.setOnAction(event -> messageBrokerList.setItems(items));
     }
 
-    private void testar(){
-        labelTeste.setText("Testado e aprovado");
-    }
 }
