@@ -1,0 +1,33 @@
+# Maven/Gradle build output
+/target/
+/build/
+
+# IntelliJ IDEA files
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# Log files
+*.log
+logs/
+
+# Compiled class files
+*.class
+
+# Package files
+*.jar
+*.war
+*.ear
+
+# Spring Boot specific
+/src/main/resources/application*.properties
+/src/main/resources/application*.yml
+
+# Other common ignores
+.DS_Store
+.gradle/
+.settings/
+.classpath
+.project
+tmp/
