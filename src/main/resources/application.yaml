@@ -1,3 +1,5 @@
 spring:
   application:
     name: kafkaShow
+  main:
+    web-application-type: none
